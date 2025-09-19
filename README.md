@@ -12,6 +12,7 @@ This repository provides a custom [Home Assistant](https://www.home-assistant.io
 
 ## Installation
 
+
 ### Via HACS (recommended)
 
 1. Ensure [HACS](https://hacs.xyz/) is installed in your Home Assistant instance.
