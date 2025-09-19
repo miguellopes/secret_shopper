@@ -1,0 +1,14 @@
+{
+  "domain": "chedraui_shopping_list",
+  "name": "Chedraui Shopping List",
+  "version": "0.1.0",
+  "documentation": "https://example.com",
+  "issue_tracker": "https://example.com/issues",
+  "requirements": [],
+  "dependencies": [],
+  "config_flow": true,
+  "codeowners": ["@your-github-handle"],
+  "iot_class": "cloud_polling",
+  "integration_type": "hub",
+  "loggers": ["custom_components.chedraui_shopping_list"]
+}
