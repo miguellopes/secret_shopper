@@ -12,6 +12,16 @@ This repository provides a custom [Home Assistant](https://www.home-assistant.io
 
 ## Installation
 
+
+### Via HACS (recommended)
+
+1. Ensure [HACS](https://hacs.xyz/) is installed in your Home Assistant instance.
+2. In HACS, go to **Integrations → Custom repositories** and add this repository URL as a custom integration.
+3. Select **Chedraui Shopping List** from the list of available integrations and install it.
+4. Restart Home Assistant when prompted.
+
+### Manual installation
+
 1. Copy the `custom_components/chedraui_shopping_list` directory into your Home Assistant `custom_components` folder.
 2. Restart Home Assistant.
 3. Add the integration from **Settings → Devices & Services → Add Integration → Chedraui Shopping List**.
