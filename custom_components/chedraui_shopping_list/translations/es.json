@@ -1,0 +1,19 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Conectar con Chedraui",
+        "description": "Autentica tu cuenta de Chedraui para sincronizar el carrito de compras.",
+        "data": {
+          "username": "Correo electrónico",
+          "password": "Contraseña",
+          "store_id": "ID de tienda"
+        }
+      }
+    },
+    "error": {
+      "auth": "Credenciales inválidas",
+      "cannot_connect": "No se pudo conectar con Chedraui"
+    }
+  }
+}

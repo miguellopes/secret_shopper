@@ -1,0 +1,104 @@
+# Describes the services provided by the Chedraui Shopping List integration.
+add_item:
+  name: Add product to cart
+  description: Add a specific product to the authenticated Chedraui cart.
+  fields:
+    product_id:
+      name: Product ID
+      description: Unique identifier of the product (e.g. part number).
+      required: true
+      example: "7501234567890"
+    quantity:
+      name: Quantity
+      description: Quantity to add. Defaults to 1.
+      required: false
+      example: 2
+    unit:
+      name: Unit
+      description: Measurement unit code (EA, KGM, GRM, LTR, MLT...).
+      required: false
+      example: "KGM"
+    measurement_type:
+      name: Measurement type
+      description: Type of measurement (piece, weight, volume). Used if unit is omitted.
+      required: false
+      example: "weight"
+    weight:
+      name: Weight override
+      description: Optional weight in kilograms when required by the product.
+      required: false
+      example: 1.25
+
+remove_item:
+  name: Remove product from cart
+  description: Remove a line item from the cart by its order item identifier.
+  fields:
+    item_id:
+      name: Item ID
+      description: Identifier of the cart line item.
+      required: true
+      example: "123456"
+
+update_item:
+  name: Update a cart item
+  description: Update quantity or unit for an existing cart line item.
+  fields:
+    item_id:
+      name: Item ID
+      description: Identifier of the cart line item.
+      required: true
+    quantity:
+      name: Quantity
+      description: New quantity value.
+      required: false
+    unit:
+      name: Unit
+      description: Measurement unit code (EA, KGM, GRM, LTR, MLT...).
+      required: false
+    measurement_type:
+      name: Measurement type
+      description: Type of measurement (piece, weight, volume). Used if unit is omitted.
+      required: false
+    weight:
+      name: Weight override
+      description: Optional weight in kilograms.
+      required: false
+
+set_quantity:
+  name: Set the quantity for a cart item
+  description: Convenience service that sets the quantity for an existing cart line item.
+  fields:
+    item_id:
+      name: Item ID
+      description: Identifier of the cart line item.
+      required: true
+    quantity:
+      name: Quantity
+      description: New quantity value.
+      required: true
+    unit:
+      name: Unit
+      description: Measurement unit code (EA, KGM, GRM, LTR, MLT...).
+      required: false
+    measurement_type:
+      name: Measurement type
+      description: Type of measurement (piece, weight, volume). Used if unit is omitted.
+      required: false
+    weight:
+      name: Weight override
+      description: Optional weight in kilograms.
+      required: false
+
+search_products:
+  name: Search products
+  description: Search for products and return a structured response.
+  fields:
+    query:
+      name: Query
+      description: Free text to search in the Chedraui catalog.
+      required: true
+    limit:
+      name: Limit
+      description: Maximum number of products to return (1-50).
+      required: false
+      example: 10
