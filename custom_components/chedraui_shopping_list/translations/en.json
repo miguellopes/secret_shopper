@@ -1,0 +1,19 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Chedraui",
+        "description": "Authenticate with your Chedraui account to synchronize your shopping cart.",
+        "data": {
+          "username": "Email",
+          "password": "Password",
+          "store_id": "Store ID"
+        }
+      }
+    },
+    "error": {
+      "auth": "Invalid credentials",
+      "cannot_connect": "Cannot connect to Chedraui"
+    }
+  }
+}
